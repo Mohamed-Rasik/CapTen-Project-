@@ -1,0 +1,228 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/cabriders/home.css' %}">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top nav-col">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}"><b class="navbold">>> CabTen</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutus">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Testimonial</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="#contactus">Contact US</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'login' %}"><button class="btn-col">Log In</button></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- carousel and content -->
+    <section id="home">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 order-1 mt-lg-5">
+          <h1 class="display-5">Be the first with<br>The convenience<br>of <span class="spn-col">CabTen</span> taxi</h1>
+          <br>
+          <p class="my-lg-2">Comes with a very great service, friendly and of course comfortable at a very affordable
+            price by all groups, both bottom and top</p>
+        </div>
+        <div class="col-lg-6 col-md-12 col-12 py-lg-0 py-3 order-sm-2">
+          <img src="{% static 'image/cabriders/homepagecar.png' %}" alt="" class="img-fluid">
+        </div>
+    </section>
+
+    <!-- search from and to -->
+    <div class="srcfrmto">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-4">
+          <label for="from" class="ms-1">From</label><br>
+          <input type="search" class="srcin" id="from">
+        </div>
+        <div class="col-md-6 col-4">
+          <label for="from">To</label><br>
+          <input type="search" class="srcin" id="from">
+        </div>
+        <div class="col-md-2 srcbtn mb-4">
+          <button class="btn-col mt-3">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- content book now -->
+    <section id="aboutus">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 mt-lg-5">
+          <h1 class="display-5">We will make you<br>very special with our<br>service</h1><br>
+          <p class="my-lg-2">There are many benefits that you will get at CabTen and for sure you will be comfortable
+            and
+            safe with us with great facilities and benefits</p>
+          <button class="btn-col mt-3">Book now</button>
+        </div>
+        <div class="col-lg-6 col-md-12 col-12 py-lg-0 py-3">
+          <img src="{% static 'image/cabriders/car2.jpg' %}" alt="car2.jpg" with="594px" height="370px"
+            class="img-fluid">
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonial -->
+    <section id="testimonial">
+      <div class="testimonial testi-flex">
+        <h1 class="display-5">What Our Customers</h1>
+        <h1 class="justify-content-center">Have To Say</h1><br>
+        <p>Here's what our customers say with CareHealth</p>
+      </div>
+      <!-- testimonial boxex -->
+      <div class="row testi-box">
+        <!-- box 1 -->
+        <div class="col-4 test-box1 me-md-5">
+          <div class="d-flex">
+            <img src="{% static 'image/cabriders/avatar2.svg' %}" alt="avatar2" class="mt-5 d-flex">
+            <h3 class="mt-5 ms-2" style="color: black;">Mohamed Rasik</h3>
+          </div>
+          <p class="testi-para1 mt-4">This CabTen is very cool, very friendly, fast and very friendly and good service.
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="108" height="20" viewBox="0 0 108 20" fill="none"
+            class="align-items-end mt-3">
+            <path
+              d="M9.53647 4.97981C9.705 4.56309 10.295 4.56309 10.4635 4.97981L11.2509 6.9267C11.4658 7.45803 11.9646 7.82047 12.5363 7.86064L14.6312 8.00783C15.0796 8.03934 15.262 8.60047 14.9177 8.88952L13.3094 10.24C12.8705 10.6085 12.68 11.1949 12.8184 11.7511L13.3258 13.789C13.4344 14.2252 12.9571 14.5719 12.5758 14.3339L10.7945 13.2216C10.3083 12.918 9.69169 12.918 9.20555 13.2216L7.42421 14.3339C7.04292 14.572 6.5656 14.2252 6.6742 13.789L7.18158 11.7511C7.32005 11.1949 7.1295 10.6085 6.69058 10.24L5.08228 8.88952C4.73803 8.60046 4.92035 8.03934 5.36876 8.00783L7.46366 7.86064C8.03538 7.82047 8.53425 7.45803 8.74912 6.9267L9.53647 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M31.5365 4.97981C31.705 4.56309 32.295 4.56309 32.4635 4.97981L33.2509 6.9267C33.4658 7.45803 33.9646 7.82047 34.5363 7.86064L36.6312 8.00783C37.0796 8.03934 37.262 8.60047 36.9177 8.88952L35.3094 10.24C34.8705 10.6085 34.68 11.1949 34.8184 11.7511L35.3258 13.789C35.4344 14.2252 34.9571 14.5719 34.5758 14.3339L32.7945 13.2216C32.3083 12.918 31.6917 12.918 31.2055 13.2216L29.4242 14.3339C29.0429 14.572 28.5656 14.2252 28.6742 13.789L29.1816 11.7511C29.32 11.1949 29.1295 10.6085 28.6906 10.24L27.0823 8.88952C26.738 8.60046 26.9204 8.03934 27.3688 8.00783L29.4637 7.86064C30.0354 7.82047 30.5342 7.45803 30.7491 6.9267L31.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M53.5365 4.97981C53.705 4.56309 54.295 4.56309 54.4635 4.97981L55.2509 6.9267C55.4658 7.45803 55.9646 7.82047 56.5363 7.86064L58.6312 8.00783C59.0796 8.03934 59.262 8.60047 58.9177 8.88952L57.3094 10.24C56.8705 10.6085 56.68 11.1949 56.8184 11.7511L57.3258 13.789C57.4344 14.2252 56.9571 14.5719 56.5758 14.3339L54.7945 13.2216C54.3083 12.918 53.6917 12.918 53.2055 13.2216L51.4242 14.3339C51.0429 14.572 50.5656 14.2252 50.6742 13.789L51.1816 11.7511C51.32 11.1949 51.1295 10.6085 50.6906 10.24L49.0823 8.88952C48.738 8.60046 48.9204 8.03934 49.3688 8.00783L51.4637 7.86064C52.0354 7.82047 52.5342 7.45803 52.7491 6.9267L53.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M75.5365 4.97981C75.705 4.56309 76.295 4.56309 76.4635 4.97981L77.2509 6.9267C77.4658 7.45803 77.9646 7.82047 78.5363 7.86064L80.6312 8.00783C81.0796 8.03934 81.262 8.60047 80.9177 8.88952L79.3094 10.24C78.8705 10.6085 78.68 11.1949 78.8184 11.7511L79.3258 13.789C79.4344 14.2252 78.9571 14.5719 78.5758 14.3339L76.7945 13.2216C76.3083 12.918 75.6917 12.918 75.2055 13.2216L73.4242 14.3339C73.0429 14.572 72.5656 14.2252 72.6742 13.789L73.1816 11.7511C73.32 11.1949 73.1295 10.6085 72.6906 10.24L71.0823 8.88952C70.738 8.60046 70.9204 8.03934 71.3688 8.00783L73.4637 7.86064C74.0354 7.82047 74.5342 7.45803 74.7491 6.9267L75.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M97.5365 4.97981C97.705 4.56309 98.295 4.56309 98.4635 4.97981L99.2509 6.9267C99.4658 7.45803 99.9646 7.82047 100.536 7.86064L102.631 8.00783C103.08 8.03934 103.262 8.60047 102.918 8.88952L101.309 10.24C100.87 10.6085 100.68 11.1949 100.818 11.7511L101.326 13.789C101.434 14.2252 100.957 14.5719 100.576 14.3339L98.7945 13.2216C98.3083 12.918 97.6917 12.918 97.2055 13.2216L95.4242 14.3339C95.0429 14.572 94.5656 14.2252 94.6742 13.789L95.1816 11.7511C95.32 11.1949 95.1295 10.6085 94.6906 10.24L93.0823 8.88952C92.738 8.60046 92.9204 8.03934 93.3688 8.00783L95.4637 7.86064C96.0354 7.82047 96.5342 7.45803 96.7491 6.9267L97.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+          </svg>
+        </div>
+        <!-- box 2 -->
+        <div class="col-4 test-box mt-md-0 mb-md-0 mt-2 mb-2 ps-4">
+          <div class="d-flex">
+            <img src="{% static 'image/cabriders/avatar1.svg' %}" alt="avatar1" class="mt-5 d-flex">
+            <h2 class="mt-5 ms-2" style="color: white;">Ashok Kumar</h2>
+          </div>
+          <p class="testi-para2 mt-4">A very comfortable and safe taxi, with super friendly and clear service at a very
+            affordable price.</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="108" height="20" viewBox="0 0 108 20" fill="none"
+            class="align-items-end mt-3">
+            <path
+              d="M9.53647 4.97981C9.705 4.56309 10.295 4.56309 10.4635 4.97981L11.2509 6.9267C11.4658 7.45803 11.9646 7.82047 12.5363 7.86064L14.6312 8.00783C15.0796 8.03934 15.262 8.60047 14.9177 8.88952L13.3094 10.24C12.8705 10.6085 12.68 11.1949 12.8184 11.7511L13.3258 13.789C13.4344 14.2252 12.9571 14.5719 12.5758 14.3339L10.7945 13.2216C10.3083 12.918 9.69169 12.918 9.20555 13.2216L7.42421 14.3339C7.04292 14.572 6.5656 14.2252 6.6742 13.789L7.18158 11.7511C7.32005 11.1949 7.1295 10.6085 6.69058 10.24L5.08228 8.88952C4.73803 8.60046 4.92035 8.03934 5.36876 8.00783L7.46366 7.86064C8.03538 7.82047 8.53425 7.45803 8.74912 6.9267L9.53647 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M31.5365 4.97981C31.705 4.56309 32.295 4.56309 32.4635 4.97981L33.2509 6.9267C33.4658 7.45803 33.9646 7.82047 34.5363 7.86064L36.6312 8.00783C37.0796 8.03934 37.262 8.60047 36.9177 8.88952L35.3094 10.24C34.8705 10.6085 34.68 11.1949 34.8184 11.7511L35.3258 13.789C35.4344 14.2252 34.9571 14.5719 34.5758 14.3339L32.7945 13.2216C32.3083 12.918 31.6917 12.918 31.2055 13.2216L29.4242 14.3339C29.0429 14.572 28.5656 14.2252 28.6742 13.789L29.1816 11.7511C29.32 11.1949 29.1295 10.6085 28.6906 10.24L27.0823 8.88952C26.738 8.60046 26.9204 8.03934 27.3688 8.00783L29.4637 7.86064C30.0354 7.82047 30.5342 7.45803 30.7491 6.9267L31.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M53.5365 4.97981C53.705 4.56309 54.295 4.56309 54.4635 4.97981L55.2509 6.9267C55.4658 7.45803 55.9646 7.82047 56.5363 7.86064L58.6312 8.00783C59.0796 8.03934 59.262 8.60047 58.9177 8.88952L57.3094 10.24C56.8705 10.6085 56.68 11.1949 56.8184 11.7511L57.3258 13.789C57.4344 14.2252 56.9571 14.5719 56.5758 14.3339L54.7945 13.2216C54.3083 12.918 53.6917 12.918 53.2055 13.2216L51.4242 14.3339C51.0429 14.572 50.5656 14.2252 50.6742 13.789L51.1816 11.7511C51.32 11.1949 51.1295 10.6085 50.6906 10.24L49.0823 8.88952C48.738 8.60046 48.9204 8.03934 49.3688 8.00783L51.4637 7.86064C52.0354 7.82047 52.5342 7.45803 52.7491 6.9267L53.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M75.5365 4.97981C75.705 4.56309 76.295 4.56309 76.4635 4.97981L77.2509 6.9267C77.4658 7.45803 77.9646 7.82047 78.5363 7.86064L80.6312 8.00783C81.0796 8.03934 81.262 8.60047 80.9177 8.88952L79.3094 10.24C78.8705 10.6085 78.68 11.1949 78.8184 11.7511L79.3258 13.789C79.4344 14.2252 78.9571 14.5719 78.5758 14.3339L76.7945 13.2216C76.3083 12.918 75.6917 12.918 75.2055 13.2216L73.4242 14.3339C73.0429 14.572 72.5656 14.2252 72.6742 13.789L73.1816 11.7511C73.32 11.1949 73.1295 10.6085 72.6906 10.24L71.0823 8.88952C70.738 8.60046 70.9204 8.03934 71.3688 8.00783L73.4637 7.86064C74.0354 7.82047 74.5342 7.45803 74.7491 6.9267L75.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M97.5365 4.97981C97.705 4.56309 98.295 4.56309 98.4635 4.97981L99.2509 6.9267C99.4658 7.45803 99.9646 7.82047 100.536 7.86064L102.631 8.00783C103.08 8.03934 103.262 8.60047 102.918 8.88952L101.309 10.24C100.87 10.6085 100.68 11.1949 100.818 11.7511L101.326 13.789C101.434 14.2252 100.957 14.5719 100.576 14.3339L98.7945 13.2216C98.3083 12.918 97.6917 12.918 97.2055 13.2216L95.4242 14.3339C95.0429 14.572 94.5656 14.2252 94.6742 13.789L95.1816 11.7511C95.32 11.1949 95.1295 10.6085 94.6906 10.24L93.0823 8.88952C92.738 8.60046 92.9204 8.03934 93.3688 8.00783L95.4637 7.86064C96.0354 7.82047 96.5342 7.45803 96.7491 6.9267L97.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+          </svg>
+        </div>
+        <!-- box 3 -->
+        <div class="col-4 test-box1 ms-md-5">
+          <div class="d-flex">
+            <img src="{% static 'image/cabriders/avatar3.svg' %}" alt="avatar3" class="mt-5 d-flex">
+            <h3 class="mt-5 ms-2" style="color: black;">Jeeva</h3>
+          </div>
+          <p class="testi-para1 mt-4">It must have been very comfortable with this CabTen service, cheap, friendly,
+            affordable..</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="108" height="20" viewBox="0 0 108 20" fill="none"
+            class="align-items-end mt-3">
+            <path
+              d="M9.53647 4.97981C9.705 4.56309 10.295 4.56309 10.4635 4.97981L11.2509 6.9267C11.4658 7.45803 11.9646 7.82047 12.5363 7.86064L14.6312 8.00783C15.0796 8.03934 15.262 8.60047 14.9177 8.88952L13.3094 10.24C12.8705 10.6085 12.68 11.1949 12.8184 11.7511L13.3258 13.789C13.4344 14.2252 12.9571 14.5719 12.5758 14.3339L10.7945 13.2216C10.3083 12.918 9.69169 12.918 9.20555 13.2216L7.42421 14.3339C7.04292 14.572 6.5656 14.2252 6.6742 13.789L7.18158 11.7511C7.32005 11.1949 7.1295 10.6085 6.69058 10.24L5.08228 8.88952C4.73803 8.60046 4.92035 8.03934 5.36876 8.00783L7.46366 7.86064C8.03538 7.82047 8.53425 7.45803 8.74912 6.9267L9.53647 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M31.5365 4.97981C31.705 4.56309 32.295 4.56309 32.4635 4.97981L33.2509 6.9267C33.4658 7.45803 33.9646 7.82047 34.5363 7.86064L36.6312 8.00783C37.0796 8.03934 37.262 8.60047 36.9177 8.88952L35.3094 10.24C34.8705 10.6085 34.68 11.1949 34.8184 11.7511L35.3258 13.789C35.4344 14.2252 34.9571 14.5719 34.5758 14.3339L32.7945 13.2216C32.3083 12.918 31.6917 12.918 31.2055 13.2216L29.4242 14.3339C29.0429 14.572 28.5656 14.2252 28.6742 13.789L29.1816 11.7511C29.32 11.1949 29.1295 10.6085 28.6906 10.24L27.0823 8.88952C26.738 8.60046 26.9204 8.03934 27.3688 8.00783L29.4637 7.86064C30.0354 7.82047 30.5342 7.45803 30.7491 6.9267L31.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M53.5365 4.97981C53.705 4.56309 54.295 4.56309 54.4635 4.97981L55.2509 6.9267C55.4658 7.45803 55.9646 7.82047 56.5363 7.86064L58.6312 8.00783C59.0796 8.03934 59.262 8.60047 58.9177 8.88952L57.3094 10.24C56.8705 10.6085 56.68 11.1949 56.8184 11.7511L57.3258 13.789C57.4344 14.2252 56.9571 14.5719 56.5758 14.3339L54.7945 13.2216C54.3083 12.918 53.6917 12.918 53.2055 13.2216L51.4242 14.3339C51.0429 14.572 50.5656 14.2252 50.6742 13.789L51.1816 11.7511C51.32 11.1949 51.1295 10.6085 50.6906 10.24L49.0823 8.88952C48.738 8.60046 48.9204 8.03934 49.3688 8.00783L51.4637 7.86064C52.0354 7.82047 52.5342 7.45803 52.7491 6.9267L53.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M75.5365 4.97981C75.705 4.56309 76.295 4.56309 76.4635 4.97981L77.2509 6.9267C77.4658 7.45803 77.9646 7.82047 78.5363 7.86064L80.6312 8.00783C81.0796 8.03934 81.262 8.60047 80.9177 8.88952L79.3094 10.24C78.8705 10.6085 78.68 11.1949 78.8184 11.7511L79.3258 13.789C79.4344 14.2252 78.9571 14.5719 78.5758 14.3339L76.7945 13.2216C76.3083 12.918 75.6917 12.918 75.2055 13.2216L73.4242 14.3339C73.0429 14.572 72.5656 14.2252 72.6742 13.789L73.1816 11.7511C73.32 11.1949 73.1295 10.6085 72.6906 10.24L71.0823 8.88952C70.738 8.60046 70.9204 8.03934 71.3688 8.00783L73.4637 7.86064C74.0354 7.82047 74.5342 7.45803 74.7491 6.9267L75.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+            <path
+              d="M97.5365 4.97981C97.705 4.56309 98.295 4.56309 98.4635 4.97981L99.2509 6.9267C99.4658 7.45803 99.9646 7.82047 100.536 7.86064L102.631 8.00783C103.08 8.03934 103.262 8.60047 102.918 8.88952L101.309 10.24C100.87 10.6085 100.68 11.1949 100.818 11.7511L101.326 13.789C101.434 14.2252 100.957 14.5719 100.576 14.3339L98.7945 13.2216C98.3083 12.918 97.6917 12.918 97.2055 13.2216L95.4242 14.3339C95.0429 14.572 94.5656 14.2252 94.6742 13.789L95.1816 11.7511C95.32 11.1949 95.1295 10.6085 94.6906 10.24L93.0823 8.88952C92.738 8.60046 92.9204 8.03934 93.3688 8.00783L95.4637 7.86064C96.0354 7.82047 96.5342 7.45803 96.7491 6.9267L97.5365 4.97981Z"
+              fill="#FDC350" stroke="white" />
+          </svg>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- contact -->
+  <div class="foot-col mt-5 mt-lg-0" id="contactus">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h3 class="display-5 mt-5 text-white">>> CabTen</h3>
+          <p class="mb-5 mt-3 text-white">Comes with a very great service, friendly and of course comfortable<br>at a
+            very affordable price by all groups, both bottom<br>and top</p>
+        </div>
+        <div class="col-sm-12 col-md-2 mt-sm-1 mt-0">
+          <h5 class="text-white mt-5">Office</h5>
+          <p class="text-white mt-3">Kadit Innovations</p>
+          <h5 class="text-white mt-5">Follow Us</h5>
+          <img src="{% static 'image/cabriders/contactus.png' %}" alt="icon" class="mb-5">
+        </div>
+        <div class="col-md-2">
+          <h5 class="text-white mt-5">About Us</h5>
+          <p class="text-white mt-3">Our cabs</p>
+          <p class="text-white mt-3">Our drivers</p>
+          <p class="text-white mt-3">Contact us</p>
+          <p class="text-white mt-3">Testimonials</p>
+        </div>
+        <div class="col-md-2">
+          <h5 class="text-white mt-5">About Us</h5>
+          <p class="text-white mt-3">FAQ</p>
+          <p class="text-white mt-3">Help</p>
+          <p class="text-white mt-3">Privacy policy</p>
+          <p class="text-white mt-3">Terms & Conditions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

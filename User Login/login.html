@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/cabriders/login.css' %}">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top nav-col">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}"><b class="navbold">>> CabTen</b></a>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Login as</a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'cabdrivers:cabdrive_login' %}"><button class="btn-col">Driver</button></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="flex-div">
+      <div class="form-box">
+        <div class="container">
+          <h2 class="fw-bold text-center">Welcome Riders</h2>
+          <p class="text-center">New to CabTen? <a href="" class=""><span class="fw-bold">Create an Account</span></a>
+          </p>
+          <form method="post" name="riders_login">
+            <div class="mb-3">
+              {% csrf_token %}
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" name="rider_username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter a Email" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" name="rider_pass" class="form-control" id="exampleInputPassword1" placeholder="Enter a Password" required>
+              <p class="d-flex justify-content-end me-2 for-pass"><a href="">Forgot Password</a></p>
+            </div>
+            <button type="submit" class="sub-btn">Submit</button>
+            <button class="goo-btn mt-2"><img src="{% static 'image/cabriders/google.svg' %}" alt="" with="30"
+                height="25" class="img-line"> Continue with Google</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

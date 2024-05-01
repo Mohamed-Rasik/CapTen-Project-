@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    font-family: 'poppins',sans-serif;
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* navbar */
+.nav-col{
+    background-color: white;
+}
+
+.navbold{
+    font-size: 25px;
+    color: #8F00FF;
+}
+
+.nav-link{
+    color: #8F00FF;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover{
+    border-bottom: 2px solid #8F00FF;
+    
+}
+
+.btn-col{
+    background-color: #8F00FF;
+    color: white;
+    padding: 6px 12px;
+    width: 77.53px;
+    height: 37.6px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* carousel and content */
+.cc-div{
+    border-radius: 1px solid black;
+}
+
+.spn-col{
+    color: #8F00FF;
+}
+
+.row-cen{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.srccol{
+    border-radius: 4px;
+    background: rgba(196, 196, 196, 0.20);
+    outline: #8F00FF;
+}
+
+.srcin{
+    width: 100%;
+    border-radius: 4px;
+    background: rgba(196, 196, 196, 0.20);
+    outline: none;
+    border: 1px solid #9000ff3a;
+    padding-left: 10px;
+    height: 35px;
+}
+
+.srcfrmto{
+    display: flex;
+    justify-content: center;
+}
+
+.srcbtn{
+    display: flex;
+    justify-content: center;
+}
+
+/* testmonial */
+#testimonial{
+    display: flex;
+    flex-direction: column;
+}
+
+.testi-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.testi-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.test-box{
+    flex-direction: row;
+    width: 462px;
+    height: 340px;
+    background-color: #8F00FF;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 10px 24px 54px 0px rgba(0, 0, 0, 0.06);
+
+    
+}
+
+.test-box1{
+    width: 346px;
+    height: 278px;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+    /* background: #FFF; */
+}
+
+/* .test-para1{
+    border-radius: 8px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    line-height: 40px; 
+} */
+
+.testi-para2{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+}
+
+/* footer */
+.foot-col{
+    background-color: #8F00FF;
+}
